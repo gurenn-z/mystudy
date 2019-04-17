@@ -1,11 +1,11 @@
 package com.zcx.rabbitmq.mapper;
 
-import com.sun.tools.javac.util.List;
 import com.zcx.rabbitmq.pojo.BrokerMessageLog;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
 
 import java.util.Date;
+import java.util.List;
 
 /**
  * @author zoucaoxin

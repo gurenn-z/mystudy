@@ -39,10 +39,14 @@ public class RabbitmqProducerApplicationTests {
 	@Test
 	public void testSend2() throws Exception {
 		Order order = new Order();
-		order.setId("20190417000000002");
+		order.setId(UUID.randomUUID().toString());
 		order.setName("rabbitmq-测试发送订单消息2");
 		order.setMessageId(System.currentTimeMillis() + "$" + UUID.randomUUID());
-		orderService.createOrder(order);
+		try {
+			orderService.createOrder(order);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }
