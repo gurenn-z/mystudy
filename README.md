@@ -1,6 +1,7 @@
+[TOC]
 # mystudy
 
-# 20190417 -- RabbitMQ
+## 20190417 -- RabbitMQ
 rabbitmq部署在阿里云轻量级服务器上，centos7，用户权限root
 
 下面是配置时遇到的的一些坑：
