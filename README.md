@@ -1,4 +1,3 @@
-[TOC]
 # mystudy
 
 ## 20190417 -- RabbitMQ
