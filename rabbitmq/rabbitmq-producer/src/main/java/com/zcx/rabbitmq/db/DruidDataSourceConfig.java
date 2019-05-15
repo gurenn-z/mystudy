@@ -1,8 +1,6 @@
 package com.zcx.rabbitmq.db;
 
 import com.alibaba.druid.pool.DruidDataSource;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -19,12 +17,9 @@ import java.sql.SQLException;
  * @date 2019/4/16
  * @description
  */
-
 @Configuration
 @EnableTransactionManagement // 开启事务
 public class DruidDataSourceConfig {
-
-    private static Logger logger = LoggerFactory.getLogger(DruidDataSourceConfig.class);
 
     @Autowired
     private DruidDataSourceSettings druidSettings;
@@ -62,7 +57,6 @@ public class DruidDataSourceConfig {
         ds.setMaxPoolPreparedStatementPerConnectionSize(druidSettings.getMaxPoolPreparedStatementPerConnectionSize());
         ds.setFilters(druidSettings.getFilters());
         ds.setConnectionProperties(druidSettings.getConnectionProperties());
-        logger.info(" druid datasource config : {} ", ds);
         return ds;
     }
 

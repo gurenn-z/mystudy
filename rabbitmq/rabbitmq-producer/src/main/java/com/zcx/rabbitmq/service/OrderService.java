@@ -57,7 +57,7 @@ public class OrderService {
         brokerMessageLogMapper.insertSelective(brokerMessageLog);
 
         // 发送消息
-        orderSender2.sendOrder(order);
+        orderSender2.sendOrder2(order);
 
     }
 }

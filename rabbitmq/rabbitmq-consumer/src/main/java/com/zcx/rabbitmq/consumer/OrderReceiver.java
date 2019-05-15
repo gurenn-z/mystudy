@@ -40,9 +40,10 @@ public class OrderReceiver {
         // 消费者操作
         System.err.println("--------------收到消息，开始消费--------------");
         System.err.println("订单ID：" + order.getId());
-
+        System.err.println(order.toString());
         // 手工签收模式下，必须手动确认签收，告诉mq消息已处理完
         Long deliveryTag = (Long) headers.get(AmqpHeaders.DELIVERY_TAG);
+        System.err.println(deliveryTag);
         // deliveryTag: 唯一标识 ID。当一个消费者向 RabbitMQ 注册后，会建立起一个 Channel，RabbitMQ
         // 会用 basic.deliver方法向消费者推送消息，这个方法携带了一个 delivery tag，
         // 它代表了 RabbitMQ 向该 Channel 投递的这条消息的唯一标识 ID，

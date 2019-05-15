@@ -27,9 +27,6 @@ public class OrderSender {
                 "order.rabbit", // routing key
                 order, // 实体信息（消息体内容）
                 cd); // 唯一消息id
-        System.out.println(rt.getExchange());
-        System.out.println(rt.getRoutingKey());
-        System.out.println(rt.getUUID());
     }
 
 }

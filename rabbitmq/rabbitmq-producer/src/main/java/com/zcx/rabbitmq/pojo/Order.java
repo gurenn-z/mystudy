@@ -52,4 +52,13 @@ public class Order implements Serializable {
     public void setMessageId(String messageId) {
         this.messageId = messageId;
     }
+
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", messageId='" + messageId + '\'' +
+                '}';
+    }
 }

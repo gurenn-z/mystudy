@@ -44,9 +44,9 @@ public class OrderSender2 {
             System.err.println("correlationData：" + correlationData);
             String messageId = correlationData.getId();
             System.err.println("ack: " + ack);
-            System.out.println(rabbitTemplate.getExchange());
-            System.out.println(rabbitTemplate.getRoutingKey());
-            System.out.println(rabbitTemplate.getUUID());
+            System.err.println(rabbitTemplate.getExchange());
+            System.err.println(rabbitTemplate.getRoutingKey());
+            System.err.println(rabbitTemplate.getUUID());
             if (ack) {
                 // 如果返回成功，则更新订单的状态
                 brokerMessageLogMapper.changeBrokerMessageLogStatus(messageId, Constants.ORDER_SEND_SUCCESS, new Date());
@@ -62,7 +62,7 @@ public class OrderSender2 {
      * 发送消息方法调用: 构建自定义对象消息
      * @param order 订单实体
      */
-    public synchronized void sendOrder(Order order) throws Exception {
+    public synchronized void sendOrder2(Order order) throws Exception {
         // 消息不是直接发送出去的，而是通过监听回调函数，实现ConfirmCallback接口，获取broker的应答结果
         rabbitTemplate.setConfirmCallback(confirmCallback);
         // 指定消息的唯一id

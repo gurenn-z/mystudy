@@ -48,7 +48,7 @@ public class RetryMessageTasker {
                 brokerMessageLogMapper.update4ReSend(messageLog.getMessageId(),  new Date());
                 Order reSendOrder = FastJsonConvertUtil.convertJSONToObject(messageLog.getMessage(), Order.class);
                 try {
-                    sender.sendOrder(reSendOrder);
+                    sender.sendOrder2(reSendOrder);
                 } catch (Exception e) {
                     e.printStackTrace();
                     System.err.println("-----------异常处理-----------");
