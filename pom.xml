@@ -12,6 +12,7 @@
     <modules>
         <module>rabbitmq</module>
         <module>sparksql</module>
+        <module>kafka</module>
     </modules>
 
 </project>
